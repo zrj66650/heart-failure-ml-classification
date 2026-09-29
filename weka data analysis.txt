@@ -1,0 +1,2168 @@
+ZERO R
+=== Run information ===
+
+Scheme:       weka.classifiers.rules.ZeroR 
+Relation:     heart-failure
+Instances:    273
+Attributes:   12
+              age
+              anaemia
+              CPK
+              diabetes
+              ejection_fraction
+              high_blood_pressure
+              platelets
+              serum_creatinine
+              serum_sodium
+              sex
+              smoking
+              class
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+ZeroR predicts class value: survived
+
+Time taken to build model: 0 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances         183               67.033  %
+Incorrectly Classified Instances        90               32.967  %
+Kappa statistic                          0     
+Mean absolute error                      0.4425
+Root mean squared error                  0.4701
+Relative absolute error                100      %
+Root relative squared error            100      %
+Total Number of Instances              273     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.000    0.000    ?          0.000    ?          ?        0.494     0.327     died
+                 1.000    1.000    0.670      1.000    0.803      ?        0.494     0.668     survived
+Weighted Avg.    0.670    0.670    ?          0.670    ?          ?        0.494     0.556     
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+   0  90 |   a = died
+   0 183 |   b = survived
+
+
+
+
+oneR
+=== Run information ===
+
+Scheme:       weka.classifiers.rules.OneR -B 6
+Relation:     heart-failure
+Instances:    273
+Attributes:   12
+              age
+              anaemia
+              CPK
+              diabetes
+              ejection_fraction
+              high_blood_pressure
+              platelets
+              serum_creatinine
+              serum_sodium
+              sex
+              smoking
+              class
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+serum_creatinine:
+	high	-> died
+	normal	-> survived
+	low	-> survived
+(197/273 instances correct)
+
+
+Time taken to build model: 0 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances         196               71.7949 %
+Incorrectly Classified Instances        77               28.2051 %
+Kappa statistic                          0.3414
+Mean absolute error                      0.2821
+Root mean squared error                  0.5311
+Relative absolute error                 63.7469 %
+Root relative squared error            112.972  %
+Total Number of Instances              273     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.511    0.180    0.582      0.511    0.544      0.343    0.665     0.459     died
+                 0.820    0.489    0.773      0.820    0.796      0.343    0.665     0.755     survived
+Weighted Avg.    0.718    0.387    0.710      0.718    0.713      0.343    0.665     0.657     
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+  46  44 |   a = died
+  33 150 |   b = survived
+
+
+
+NaiveBayes 
+=== Run information ===
+
+Scheme:       weka.classifiers.bayes.NaiveBayes 
+Relation:     heart-failure
+Instances:    273
+Attributes:   12
+              age
+              anaemia
+              CPK
+              diabetes
+              ejection_fraction
+              high_blood_pressure
+              platelets
+              serum_creatinine
+              serum_sodium
+              sex
+              smoking
+              class
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+Naive Bayes Classifier
+
+                         Class
+Attribute                 died survived
+                        (0.33)   (0.67)
+========================================
+age
+  [61-70]                  19.0     56.0
+  [40-50]                  19.0     50.0
+  [51-60]                  25.0     59.0
+  70plus                   31.0     22.0
+  [total]                  94.0    187.0
+
+anaemia
+  yes                      43.0     77.0
+  no                       49.0    108.0
+  [total]                  92.0    185.0
+
+CPK
+  normal                   37.0     80.0
+  high                     45.0     79.0
+  very-high                 8.0     26.0
+  severely-high             4.0      2.0
+  [total]                  94.0    187.0
+
+diabetes
+  yes                      40.0     78.0
+  no                       52.0    107.0
+  [total]                  92.0    185.0
+
+ejection_fraction
+  low                      68.0     96.0
+  normal                    9.0     29.0
+  borderline                7.0     16.0
+  mildly-low               10.0     46.0
+  [total]                  94.0    187.0
+
+high_blood_pressure
+  no                       56.0    120.0
+  yes                      36.0     65.0
+  [total]                  92.0    185.0
+
+platelets
+  normal                   74.0    155.0
+  low                      12.0     17.0
+  high                      3.0      7.0
+  very-high                 5.0      8.0
+  [total]                  94.0    187.0
+
+serum_creatinine
+  high                     47.0     33.0
+  normal                   45.0    151.0
+  low                       1.0      2.0
+  [total]                  93.0    186.0
+
+serum_sodium
+  normal                   51.0    144.0
+  low                      40.0     40.0
+  high                      2.0      2.0
+  [total]                  93.0    186.0
+
+sex
+  M                        59.0    120.0
+  F                        33.0     65.0
+  [total]                  92.0    185.0
+
+smoking
+  no                       65.0    127.0
+  yes                      27.0     58.0
+  [total]                  92.0    185.0
+
+
+
+Time taken to build model: 0 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances         194               71.0623 %
+Incorrectly Classified Instances        79               28.9377 %
+Kappa statistic                          0.2955
+Mean absolute error                      0.3518
+Root mean squared error                  0.4412
+Relative absolute error                 79.5217 %
+Root relative squared error             93.8501 %
+Total Number of Instances              273     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.422    0.148    0.585      0.422    0.490      0.303    0.725     0.582     died
+                 0.852    0.578    0.750      0.852    0.798      0.303    0.725     0.816     survived
+Weighted Avg.    0.711    0.436    0.695      0.711    0.697      0.303    0.725     0.739     
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+  38  52 |   a = died
+  27 156 |   b = survived
+
+
+IBk -K 5
+=== Run information ===
+
+Scheme:       weka.classifiers.lazy.IBk -K 5 -W 0 -A "weka.core.neighboursearch.LinearNNSearch -A \"weka.core.EuclideanDistance -R first-last\""
+Relation:     heart-failure
+Instances:    273
+Attributes:   12
+              age
+              anaemia
+              CPK
+              diabetes
+              ejection_fraction
+              high_blood_pressure
+              platelets
+              serum_creatinine
+              serum_sodium
+              sex
+              smoking
+              class
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+IB1 instance-based classifier
+using 5 nearest neighbour(s) for classification
+
+
+Time taken to build model: 0 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances         194               71.0623 %
+Incorrectly Classified Instances        79               28.9377 %
+Kappa statistic                          0.2596
+Mean absolute error                      0.381 
+Root mean squared error                  0.4478
+Relative absolute error                 86.1171 %
+Root relative squared error             95.2635 %
+Total Number of Instances              273     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.333    0.104    0.612      0.333    0.432      0.281    0.690     0.531     died
+                 0.896    0.667    0.732      0.896    0.806      0.281    0.690     0.805     survived
+Weighted Avg.    0.711    0.481    0.693      0.711    0.683      0.281    0.690     0.715     
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+  30  60 |   a = died
+  19 164 |   b = survived
+
+
+
+J48 pruned
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.J48 -C 0.25 -M 2
+Relation:     heart-failure
+Instances:    273
+Attributes:   12
+              age
+              anaemia
+              CPK
+              diabetes
+              ejection_fraction
+              high_blood_pressure
+              platelets
+              serum_creatinine
+              serum_sodium
+              sex
+              smoking
+              class
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+J48 pruned tree
+------------------
+
+serum_creatinine = high
+|   serum_sodium = normal
+|   |   high_blood_pressure = no
+|   |   |   diabetes = yes
+|   |   |   |   sex = M
+|   |   |   |   |   age = [61-70]: died (2.0)
+|   |   |   |   |   age = [40-50]: died (2.0/1.0)
+|   |   |   |   |   age = [51-60]: survived (4.0)
+|   |   |   |   |   age = 70plus: died (1.0)
+|   |   |   |   sex = F: died (2.0)
+|   |   |   diabetes = no: survived (18.0/4.0)
+|   |   high_blood_pressure = yes: died (10.0/3.0)
+|   serum_sodium = low: died (38.0/10.0)
+|   serum_sodium = high: died (1.0)
+serum_creatinine = normal: survived (194.0/44.0)
+serum_creatinine = low: survived (1.0)
+
+Number of Leaves  : 	11
+
+Size of the tree : 	17
+
+
+Time taken to build model: 0.01 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances         197               72.1612 %
+Incorrectly Classified Instances        76               27.8388 %
+Kappa statistic                          0.2944
+Mean absolute error                      0.3785
+Root mean squared error                  0.4528
+Relative absolute error                 85.5415 %
+Root relative squared error             96.3118 %
+Total Number of Instances              273     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.367    0.104    0.635      0.367    0.465      0.315    0.606     0.462     died
+                 0.896    0.633    0.742      0.896    0.812      0.315    0.606     0.707     survived
+Weighted Avg.    0.722    0.459    0.707      0.722    0.697      0.315    0.606     0.626     
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+  33  57 |   a = died
+  19 164 |   b = survived
+
+
+48 unpruned
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.J48 -U -M 2
+Relation:     heart-failure
+Instances:    273
+Attributes:   12
+              age
+              anaemia
+              CPK
+              diabetes
+              ejection_fraction
+              high_blood_pressure
+              platelets
+              serum_creatinine
+              serum_sodium
+              sex
+              smoking
+              class
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+J48 unpruned tree
+------------------
+
+serum_creatinine = high
+|   serum_sodium = normal
+|   |   high_blood_pressure = no
+|   |   |   diabetes = yes
+|   |   |   |   sex = M
+|   |   |   |   |   age = [61-70]: died (2.0)
+|   |   |   |   |   age = [40-50]: died (2.0/1.0)
+|   |   |   |   |   age = [51-60]: survived (4.0)
+|   |   |   |   |   age = 70plus: died (1.0)
+|   |   |   |   sex = F: died (2.0)
+|   |   |   diabetes = no
+|   |   |   |   smoking = no
+|   |   |   |   |   age = [61-70]: survived (5.0/1.0)
+|   |   |   |   |   age = [40-50]: died (1.0)
+|   |   |   |   |   age = [51-60]: survived (4.0/1.0)
+|   |   |   |   |   age = 70plus: died (2.0/1.0)
+|   |   |   |   smoking = yes: survived (6.0)
+|   |   high_blood_pressure = yes
+|   |   |   age = [61-70]: died (1.0)
+|   |   |   age = [40-50]: died (1.0)
+|   |   |   age = [51-60]
+|   |   |   |   anaemia = yes: died (3.0/1.0)
+|   |   |   |   anaemia = no: survived (2.0)
+|   |   |   age = 70plus: died (3.0)
+|   serum_sodium = low
+|   |   platelets = normal
+|   |   |   ejection_fraction = low
+|   |   |   |   anaemia = yes: died (9.0/1.0)
+|   |   |   |   anaemia = no
+|   |   |   |   |   high_blood_pressure = no
+|   |   |   |   |   |   CPK = normal: survived (2.0)
+|   |   |   |   |   |   CPK = high
+|   |   |   |   |   |   |   diabetes = yes: survived (3.0/1.0)
+|   |   |   |   |   |   |   diabetes = no: died (2.0)
+|   |   |   |   |   |   CPK = very-high: died (2.0/1.0)
+|   |   |   |   |   |   CPK = severely-high: survived (0.0)
+|   |   |   |   |   high_blood_pressure = yes: died (7.0/1.0)
+|   |   |   ejection_fraction = normal: survived (1.0)
+|   |   |   ejection_fraction = borderline: survived (1.0)
+|   |   |   ejection_fraction = mildly-low
+|   |   |   |   CPK = normal: died (2.0)
+|   |   |   |   CPK = high: died (2.0)
+|   |   |   |   CPK = very-high: survived (1.0)
+|   |   |   |   CPK = severely-high: died (0.0)
+|   |   platelets = low: died (5.0)
+|   |   platelets = high: died (0.0)
+|   |   platelets = very-high: died (1.0)
+|   serum_sodium = high: died (1.0)
+serum_creatinine = normal
+|   ejection_fraction = low
+|   |   sex = M
+|   |   |   platelets = normal
+|   |   |   |   CPK = normal
+|   |   |   |   |   age = [61-70]: survived (4.0)
+|   |   |   |   |   age = [40-50]: survived (5.0/1.0)
+|   |   |   |   |   age = [51-60]
+|   |   |   |   |   |   anaemia = yes
+|   |   |   |   |   |   |   high_blood_pressure = no: died (3.0/1.0)
+|   |   |   |   |   |   |   high_blood_pressure = yes: survived (2.0)
+|   |   |   |   |   |   anaemia = no: survived (4.0)
+|   |   |   |   |   age = 70plus: died (3.0)
+|   |   |   |   CPK = high
+|   |   |   |   |   diabetes = yes
+|   |   |   |   |   |   anaemia = yes: survived (3.0)
+|   |   |   |   |   |   anaemia = no
+|   |   |   |   |   |   |   smoking = no: survived (2.0)
+|   |   |   |   |   |   |   smoking = yes: died (3.0/1.0)
+|   |   |   |   |   diabetes = no
+|   |   |   |   |   |   age = [61-70]
+|   |   |   |   |   |   |   anaemia = yes: died (3.0/1.0)
+|   |   |   |   |   |   |   anaemia = no: survived (3.0/1.0)
+|   |   |   |   |   |   age = [40-50]
+|   |   |   |   |   |   |   smoking = no: died (2.0)
+|   |   |   |   |   |   |   smoking = yes: survived (3.0/1.0)
+|   |   |   |   |   |   age = [51-60]: died (0.0)
+|   |   |   |   |   |   age = 70plus: survived (3.0/1.0)
+|   |   |   |   CPK = very-high
+|   |   |   |   |   smoking = no
+|   |   |   |   |   |   anaemia = yes: survived (2.0)
+|   |   |   |   |   |   anaemia = no
+|   |   |   |   |   |   |   high_blood_pressure = no: died (2.0)
+|   |   |   |   |   |   |   high_blood_pressure = yes: survived (3.0/1.0)
+|   |   |   |   |   smoking = yes: survived (3.0)
+|   |   |   |   CPK = severely-high: died (4.0/1.0)
+|   |   |   platelets = low: survived (8.0/2.0)
+|   |   |   platelets = high: died (1.0)
+|   |   |   platelets = very-high: survived (2.0)
+|   |   sex = F
+|   |   |   serum_sodium = normal
+|   |   |   |   platelets = normal
+|   |   |   |   |   CPK = normal
+|   |   |   |   |   |   diabetes = yes: survived (6.0/1.0)
+|   |   |   |   |   |   diabetes = no: died (3.0/1.0)
+|   |   |   |   |   CPK = high
+|   |   |   |   |   |   diabetes = yes
+|   |   |   |   |   |   |   anaemia = yes: died (2.0)
+|   |   |   |   |   |   |   anaemia = no
+|   |   |   |   |   |   |   |   age = [61-70]: survived (1.0)
+|   |   |   |   |   |   |   |   age = [40-50]: survived (2.0)
+|   |   |   |   |   |   |   |   age = [51-60]: survived (2.0)
+|   |   |   |   |   |   |   |   age = 70plus: died (1.0)
+|   |   |   |   |   |   diabetes = no: survived (4.0)
+|   |   |   |   |   CPK = very-high: survived (2.0)
+|   |   |   |   |   CPK = severely-high: survived (0.0)
+|   |   |   |   platelets = low: died (2.0/1.0)
+|   |   |   |   platelets = high: survived (3.0)
+|   |   |   |   platelets = very-high: survived (1.0)
+|   |   |   serum_sodium = low: survived (7.0)
+|   |   |   serum_sodium = high: survived (0.0)
+|   ejection_fraction = normal: survived (28.0/4.0)
+|   ejection_fraction = borderline
+|   |   smoking = no
+|   |   |   diabetes = yes: died (5.0/1.0)
+|   |   |   diabetes = no: survived (9.0/2.0)
+|   |   smoking = yes: survived (4.0)
+|   ejection_fraction = mildly-low
+|   |   high_blood_pressure = no: survived (29.0)
+|   |   high_blood_pressure = yes
+|   |   |   smoking = no: survived (11.0/1.0)
+|   |   |   smoking = yes
+|   |   |   |   diabetes = yes: died (2.0)
+|   |   |   |   diabetes = no: survived (2.0)
+serum_creatinine = low: survived (1.0)
+
+Number of Leaves  : 	79
+
+Size of the tree : 	124
+
+
+Time taken to build model: 0 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances         180               65.9341 %
+Incorrectly Classified Instances        93               34.0659 %
+Kappa statistic                          0.2314
+Mean absolute error                      0.3694
+Root mean squared error                  0.5366
+Relative absolute error                 83.4954 %
+Root relative squared error            114.142  %
+Total Number of Instances              273     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.489    0.257    0.484      0.489    0.486      0.231    0.629     0.415     died
+                 0.743    0.511    0.747      0.743    0.745      0.231    0.629     0.753     survived
+Weighted Avg.    0.659    0.427    0.660      0.659    0.660      0.231    0.629     0.642     
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+  44  46 |   a = died
+  47 136 |   b = survived
+
+
+Bagging (J48)
+=== Run information ===
+
+Scheme:       weka.classifiers.meta.Bagging -P 100 -S 1 -num-slots 1 -I 10 -W weka.classifiers.trees.J48 -- -C 0.25 -M 2
+Relation:     heart-failure
+Instances:    273
+Attributes:   12
+              age
+              anaemia
+              CPK
+              diabetes
+              ejection_fraction
+              high_blood_pressure
+              platelets
+              serum_creatinine
+              serum_sodium
+              sex
+              smoking
+              class
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+Bagging with 10 iterations and base learner
+
+weka.classifiers.trees.J48 -C 0.25 -M 2
+
+Time taken to build model: 0.01 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances         190               69.5971 %
+Incorrectly Classified Instances        83               30.4029 %
+Kappa statistic                          0.227 
+Mean absolute error                      0.3682
+Root mean squared error                  0.4489
+Relative absolute error                 83.2221 %
+Root relative squared error             95.4904 %
+Total Number of Instances              273     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.322    0.120    0.569      0.322    0.411      0.244    0.686     0.544     died
+                 0.880    0.678    0.725      0.880    0.795      0.244    0.686     0.780     survived
+Weighted Avg.    0.696    0.494    0.674      0.696    0.669      0.244    0.686     0.702     
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+  29  61 |   a = died
+  22 161 |   b = survived
+
+
+
+AdaBoost J48
+=== Run information ===
+
+Scheme:       weka.classifiers.meta.AdaBoostM1 -P 100 -S 1 -I 10 -W weka.classifiers.trees.J48 -- -C 0.25 -M 2
+Relation:     heart-failure
+Instances:    273
+Attributes:   12
+              age
+              anaemia
+              CPK
+              diabetes
+              ejection_fraction
+              high_blood_pressure
+              platelets
+              serum_creatinine
+              serum_sodium
+              sex
+              smoking
+              class
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+AdaBoostM1: Base classifiers and their weights: 
+
+J48 pruned tree
+------------------
+
+serum_creatinine = high
+|   serum_sodium = normal
+|   |   high_blood_pressure = no
+|   |   |   diabetes = yes
+|   |   |   |   sex = M
+|   |   |   |   |   age = [61-70]: died (2.0)
+|   |   |   |   |   age = [40-50]: died (2.0/1.0)
+|   |   |   |   |   age = [51-60]: survived (4.0)
+|   |   |   |   |   age = 70plus: died (1.0)
+|   |   |   |   sex = F: died (2.0)
+|   |   |   diabetes = no: survived (18.0/4.0)
+|   |   high_blood_pressure = yes: died (10.0/3.0)
+|   serum_sodium = low: died (38.0/10.0)
+|   serum_sodium = high: died (1.0)
+serum_creatinine = normal: survived (194.0/44.0)
+serum_creatinine = low: survived (1.0)
+
+Number of Leaves  : 	11
+
+Size of the tree : 	17
+
+
+Weight: 1.22
+
+J48 pruned tree
+------------------
+
+ejection_fraction = low
+|   age = [61-70]
+|   |   smoking = no: survived (23.69/8.28)
+|   |   smoking = yes
+|   |   |   CPK = normal: survived (2.59)
+|   |   |   CPK = high: died (8.55/1.29)
+|   |   |   CPK = very-high: survived (0.65)
+|   |   |   CPK = severely-high: died (0.0)
+|   age = [40-50]
+|   |   platelets = normal
+|   |   |   high_blood_pressure = no
+|   |   |   |   smoking = no
+|   |   |   |   |   diabetes = yes: survived (11.78/4.4)
+|   |   |   |   |   diabetes = no: died (7.9/1.29)
+|   |   |   |   smoking = yes: survived (6.73/0.65)
+|   |   |   high_blood_pressure = yes: died (15.54/5.44)
+|   |   platelets = low: died (6.34/1.29)
+|   |   platelets = high: survived (1.29)
+|   |   platelets = very-high: survived (0.65)
+|   age = [51-60]
+|   |   platelets = normal
+|   |   |   anaemia = yes: died (18.12/5.18)
+|   |   |   anaemia = no
+|   |   |   |   CPK = normal: survived (6.08)
+|   |   |   |   CPK = high: survived (4.79/0.65)
+|   |   |   |   CPK = very-high
+|   |   |   |   |   diabetes = yes: survived (3.5/0.65)
+|   |   |   |   |   diabetes = no: died (6.34/1.29)
+|   |   |   |   CPK = severely-high: died (2.2)
+|   |   platelets = low: survived (5.82/1.94)
+|   |   platelets = high: died (3.5/0.65)
+|   |   platelets = very-high: survived (0.65)
+|   age = 70plus: died (33.4/7.38)
+ejection_fraction = normal
+|   high_blood_pressure = no
+|   |   smoking = no
+|   |   |   age = [61-70]: died (6.99/2.59)
+|   |   |   age = [40-50]: survived (3.23/0.65)
+|   |   |   age = [51-60]: died (4.14/1.29)
+|   |   |   age = 70plus: survived (2.85)
+|   |   smoking = yes: died (5.7/1.29)
+|   high_blood_pressure = yes: survived (11.26/0.65)
+ejection_fraction = borderline
+|   smoking = no
+|   |   diabetes = yes: died (9.45/0.65)
+|   |   diabetes = no
+|   |   |   CPK = normal: survived (6.99)
+|   |   |   CPK = high: died (5.7/1.29)
+|   |   |   CPK = very-high: survived (0.65)
+|   |   |   CPK = severely-high: survived (0.0)
+|   smoking = yes: survived (3.23)
+ejection_fraction = mildly-low
+|   high_blood_pressure = no: survived (26.4/3.5)
+|   high_blood_pressure = yes
+|   |   smoking = no: survived (9.96/3.5)
+|   |   smoking = yes: died (6.34/1.29)
+
+Number of Leaves  : 	37
+
+Size of the tree : 	57
+
+
+Weight: 1.33
+
+J48 pruned tree
+------------------
+
+smoking = no
+|   platelets = normal
+|   |   serum_creatinine = high
+|   |   |   ejection_fraction = low
+|   |   |   |   high_blood_pressure = no
+|   |   |   |   |   anaemia = yes: died (13.14/4.49)
+|   |   |   |   |   anaemia = no
+|   |   |   |   |   |   sex = M: survived (11.23/1.96)
+|   |   |   |   |   |   sex = F
+|   |   |   |   |   |   |   diabetes = yes: died (3.09)
+|   |   |   |   |   |   |   diabetes = no: survived (2.21/0.41)
+|   |   |   |   high_blood_pressure = yes: died (4.0)
+|   |   |   ejection_fraction = normal: died (6.29/2.94)
+|   |   |   ejection_fraction = borderline: survived (2.78)
+|   |   |   ejection_fraction = mildly-low: died (13.25/1.8)
+|   |   serum_creatinine = normal
+|   |   |   ejection_fraction = low
+|   |   |   |   serum_sodium = normal
+|   |   |   |   |   age = [61-70]: died (12.98/2.45)
+|   |   |   |   |   age = [40-50]
+|   |   |   |   |   |   diabetes = yes: died (15.92/4.0)
+|   |   |   |   |   |   diabetes = no: survived (7.43/2.78)
+|   |   |   |   |   age = [51-60]
+|   |   |   |   |   |   high_blood_pressure = no
+|   |   |   |   |   |   |   sex = M: died (2.78)
+|   |   |   |   |   |   |   sex = F: survived (3.76/1.39)
+|   |   |   |   |   |   high_blood_pressure = yes: survived (7.67/1.39)
+|   |   |   |   |   age = 70plus: survived (5.88/2.78)
+|   |   |   |   serum_sodium = low: survived (14.04/4.18)
+|   |   |   |   serum_sodium = high: died (0.0)
+|   |   |   ejection_fraction = normal: survived (14.61/2.78)
+|   |   |   ejection_fraction = borderline
+|   |   |   |   diabetes = yes: died (7.11/1.55)
+|   |   |   |   diabetes = no: survived (5.3/1.39)
+|   |   |   ejection_fraction = mildly-low
+|   |   |   |   high_blood_pressure = no: survived (7.77)
+|   |   |   |   high_blood_pressure = yes
+|   |   |   |   |   CPK = normal: died (6.9/1.64)
+|   |   |   |   |   CPK = high: survived (2.04)
+|   |   |   |   |   CPK = very-high: survived (0.41)
+|   |   |   |   |   CPK = severely-high: died (0.0)
+|   |   serum_creatinine = low: survived (1.55)
+|   platelets = low: died (15.44/4.41)
+|   platelets = high: survived (3.59/0.41)
+|   platelets = very-high: survived (4.0/1.96)
+smoking = yes
+|   sex = M
+|   |   age = [61-70]
+|   |   |   serum_sodium = normal: survived (13.98/5.57)
+|   |   |   serum_sodium = low: died (2.21/0.41)
+|   |   |   serum_sodium = high: survived (0.0)
+|   |   age = [40-50]: survived (16.78/2.94)
+|   |   age = [51-60]
+|   |   |   platelets = normal: survived (21.47/3.19)
+|   |   |   platelets = low: died (2.37/0.82)
+|   |   |   platelets = high: died (1.39)
+|   |   |   platelets = very-high: died (1.39)
+|   |   age = 70plus
+|   |   |   CPK = normal: died (5.81/0.41)
+|   |   |   CPK = high: survived (6.85/1.8)
+|   |   |   CPK = very-high: survived (1.55)
+|   |   |   CPK = severely-high: died (1.39)
+|   sex = F: died (2.62/0.41)
+
+Number of Leaves  : 	42
+
+Size of the tree : 	64
+
+
+Weight: 1.26
+
+J48 pruned tree
+------------------
+
+platelets = normal
+|   ejection_fraction = low
+|   |   serum_creatinine = high
+|   |   |   age = [61-70]
+|   |   |   |   diabetes = yes: died (7.48)
+|   |   |   |   diabetes = no: survived (5.1/0.26)
+|   |   |   age = [40-50]
+|   |   |   |   serum_sodium = normal: died (5.29/0.89)
+|   |   |   |   serum_sodium = low: survived (4.8/0.52)
+|   |   |   |   serum_sodium = high: survived (0.0)
+|   |   |   age = [51-60]: survived (16.79/4.59)
+|   |   |   age = 70plus
+|   |   |   |   diabetes = yes: survived (3.9/0.52)
+|   |   |   |   diabetes = no: died (3.83)
+|   |   serum_creatinine = normal
+|   |   |   sex = M: died (73.11/22.26)
+|   |   |   sex = F
+|   |   |   |   CPK = normal
+|   |   |   |   |   diabetes = yes: survived (4.53/0.89)
+|   |   |   |   |   diabetes = no: died (7.46/0.93)
+|   |   |   |   CPK = high
+|   |   |   |   |   diabetes = yes
+|   |   |   |   |   |   anaemia = yes: died (7.52/0.99)
+|   |   |   |   |   |   anaemia = no
+|   |   |   |   |   |   |   age = [61-70]: survived (0.93)
+|   |   |   |   |   |   |   age = [40-50]: survived (5.69)
+|   |   |   |   |   |   |   age = [51-60]: survived (0.52)
+|   |   |   |   |   |   |   age = 70plus: died (3.15)
+|   |   |   |   |   diabetes = no: survived (5.36)
+|   |   |   |   CPK = very-high: survived (1.92)
+|   |   |   |   CPK = severely-high: survived (0.0)
+|   |   serum_creatinine = low: survived (0.99)
+|   ejection_fraction = normal
+|   |   sex = M: survived (9.11/0.89)
+|   |   sex = F
+|   |   |   serum_sodium = normal
+|   |   |   |   CPK = normal
+|   |   |   |   |   diabetes = yes: survived (2.51)
+|   |   |   |   |   diabetes = no
+|   |   |   |   |   |   serum_creatinine = high: survived (4.4/0.89)
+|   |   |   |   |   |   serum_creatinine = normal: died (4.08/0.93)
+|   |   |   |   |   |   serum_creatinine = low: survived (0.0)
+|   |   |   |   CPK = high: died (4.67/0.52)
+|   |   |   |   CPK = very-high: died (0.0)
+|   |   |   |   CPK = severely-high: died (0.0)
+|   |   |   serum_sodium = low: survived (3.15)
+|   |   |   serum_sodium = high: died (0.26)
+|   ejection_fraction = borderline
+|   |   sex = M: survived (8.23/1.79)
+|   |   sex = F
+|   |   |   serum_sodium = normal: survived (3.04/0.89)
+|   |   |   serum_sodium = low: died (4.05)
+|   |   |   serum_sodium = high: died (0.0)
+|   ejection_fraction = mildly-low
+|   |   age = [61-70]
+|   |   |   smoking = no: survived (5.02)
+|   |   |   smoking = yes: died (6.57/0.26)
+|   |   age = [40-50]: survived (5.54/0.99)
+|   |   age = [51-60]: survived (8.55/0.99)
+|   |   age = 70plus: died (10.72/1.71)
+platelets = low
+|   serum_creatinine = high
+|   |   serum_sodium = normal: survived (3.63/0.52)
+|   |   serum_sodium = low: died (4.23)
+|   |   serum_sodium = high: died (0.0)
+|   serum_creatinine = normal: survived (15.34/3.57)
+|   serum_creatinine = low: survived (0.0)
+platelets = high: survived (4.12/1.82)
+platelets = very-high: died (7.42/1.84)
+
+Number of Leaves  : 	46
+
+Size of the tree : 	70
+
+
+Weight: 1.51
+
+J48 pruned tree
+------------------
+
+serum_creatinine = high
+|   ejection_fraction = low: died (53.99/19.27)
+|   ejection_fraction = normal
+|   |   age = [61-70]
+|   |   |   anaemia = yes: survived (2.14)
+|   |   |   anaemia = no: died (2.46)
+|   |   age = [40-50]: died (0.61)
+|   |   age = [51-60]: died (1.31/0.55)
+|   |   age = 70plus: survived (2.65)
+|   ejection_fraction = borderline: survived (1.81)
+|   ejection_fraction = mildly-low: died (11.72/2.81)
+serum_creatinine = normal
+|   platelets = normal
+|   |   ejection_fraction = low
+|   |   |   CPK = normal
+|   |   |   |   serum_sodium = normal
+|   |   |   |   |   age = [61-70]
+|   |   |   |   |   |   anaemia = yes: survived (3.84)
+|   |   |   |   |   |   anaemia = no: died (2.79/0.72)
+|   |   |   |   |   age = [40-50]
+|   |   |   |   |   |   high_blood_pressure = no: survived (7.31)
+|   |   |   |   |   |   high_blood_pressure = yes: died (4.39)
+|   |   |   |   |   age = [51-60]
+|   |   |   |   |   |   high_blood_pressure = no: died (7.38/1.61)
+|   |   |   |   |   |   high_blood_pressure = yes: survived (7.69)
+|   |   |   |   |   age = 70plus: died (2.47)
+|   |   |   |   serum_sodium = low: survived (6.72/0.55)
+|   |   |   |   serum_sodium = high: survived (0.0)
+|   |   |   CPK = high
+|   |   |   |   serum_sodium = normal
+|   |   |   |   |   high_blood_pressure = no: survived (21.02/5.91)
+|   |   |   |   |   high_blood_pressure = yes
+|   |   |   |   |   |   anaemia = yes: died (6.48/0.57)
+|   |   |   |   |   |   anaemia = no
+|   |   |   |   |   |   |   age = [61-70]: survived (5.47)
+|   |   |   |   |   |   |   age = [40-50]: survived (4.07/1.93)
+|   |   |   |   |   |   |   age = [51-60]: survived (0.16)
+|   |   |   |   |   |   |   age = 70plus: died (3.85)
+|   |   |   |   serum_sodium = low
+|   |   |   |   |   high_blood_pressure = no: died (6.77/2.37)
+|   |   |   |   |   high_blood_pressure = yes: survived (9.7)
+|   |   |   |   serum_sodium = high: survived (0.0)
+|   |   |   CPK = very-high
+|   |   |   |   serum_sodium = normal: survived (15.99/2.61)
+|   |   |   |   serum_sodium = low: died (2.65/0.72)
+|   |   |   |   serum_sodium = high: survived (0.0)
+|   |   |   CPK = severely-high: died (2.36/0.72)
+|   |   ejection_fraction = normal: survived (16.32/6.31)
+|   |   ejection_fraction = borderline: died (14.01/4.15)
+|   |   ejection_fraction = mildly-low: survived (19.17/5.91)
+|   platelets = low
+|   |   anaemia = yes: died (12.68/2.83)
+|   |   anaemia = no: survived (4.36)
+|   platelets = high: died (3.87/1.41)
+|   platelets = very-high: survived (4.16/0.55)
+serum_creatinine = low: survived (0.61)
+
+Number of Leaves  : 	38
+
+Size of the tree : 	57
+
+
+Weight: 1.23
+
+J48 pruned tree
+------------------
+
+sex = M
+|   serum_creatinine = high
+|   |   diabetes = yes: survived (35.28/6.25)
+|   |   diabetes = no
+|   |   |   age = [61-70]: survived (5.81/0.47)
+|   |   |   age = [40-50]: survived (3.73/0.82)
+|   |   |   age = [51-60]
+|   |   |   |   serum_sodium = normal: survived (6.97/1.59)
+|   |   |   |   serum_sodium = low: died (4.27)
+|   |   |   |   serum_sodium = high: died (0.0)
+|   |   |   age = 70plus: died (4.26/0.82)
+|   serum_creatinine = normal
+|   |   anaemia = yes
+|   |   |   platelets = normal: survived (34.65/9.49)
+|   |   |   platelets = low
+|   |   |   |   age = [61-70]: survived (1.26)
+|   |   |   |   age = [40-50]: died (1.59)
+|   |   |   |   age = [51-60]: survived (2.51)
+|   |   |   |   age = 70plus: died (3.18)
+|   |   |   platelets = high: survived (0.71)
+|   |   |   platelets = very-high: died (1.21)
+|   |   anaemia = no
+|   |   |   ejection_fraction = low
+|   |   |   |   CPK = normal: survived (9.08/1.21)
+|   |   |   |   CPK = high
+|   |   |   |   |   serum_sodium = normal
+|   |   |   |   |   |   age = [61-70]
+|   |   |   |   |   |   |   high_blood_pressure = no: died (4.64/0.37)
+|   |   |   |   |   |   |   high_blood_pressure = yes: survived (3.53)
+|   |   |   |   |   |   age = [40-50]: died (11.13/2.58)
+|   |   |   |   |   |   age = [51-60]: died (2.42/0.83)
+|   |   |   |   |   |   age = 70plus: survived (3.4/1.24)
+|   |   |   |   |   serum_sodium = low: survived (9.2/2.84)
+|   |   |   |   |   serum_sodium = high: died (0.0)
+|   |   |   |   CPK = very-high
+|   |   |   |   |   smoking = no
+|   |   |   |   |   |   high_blood_pressure = no: died (5.79)
+|   |   |   |   |   |   high_blood_pressure = yes: survived (4.78/1.24)
+|   |   |   |   |   smoking = yes: survived (2.7)
+|   |   |   |   CPK = severely-high: survived (2.66/1.06)
+|   |   |   ejection_fraction = normal: died (7.16/1.69)
+|   |   |   ejection_fraction = borderline: survived (8.22/1.59)
+|   |   |   ejection_fraction = mildly-low
+|   |   |   |   diabetes = yes: died (9.69/1.14)
+|   |   |   |   diabetes = no: survived (2.15)
+|   serum_creatinine = low: survived (0.0)
+sex = F
+|   diabetes = yes
+|   |   anaemia = yes: died (21.22/5.02)
+|   |   anaemia = no
+|   |   |   serum_creatinine = high: died (5.81/1.24)
+|   |   |   serum_creatinine = normal: survived (9.88/2.83)
+|   |   |   serum_creatinine = low: survived (0.0)
+|   diabetes = no
+|   |   ejection_fraction = low: survived (20.01/5.08)
+|   |   ejection_fraction = normal
+|   |   |   high_blood_pressure = no: died (8.18/2.32)
+|   |   |   high_blood_pressure = yes: survived (2.04/0.39)
+|   |   ejection_fraction = borderline: survived (4.55/1.24)
+|   |   ejection_fraction = mildly-low: died (9.34/2.61)
+
+Number of Leaves  : 	40
+
+Size of the tree : 	61
+
+
+Weight: 1.36
+
+J48 pruned tree
+------------------
+
+ejection_fraction = low
+|   CPK = normal
+|   |   age = [61-70]
+|   |   |   smoking = no
+|   |   |   |   high_blood_pressure = no: died (8.8/0.98)
+|   |   |   |   high_blood_pressure = yes: survived (2.83/0.25)
+|   |   |   smoking = yes: survived (2.56)
+|   |   age = [40-50]
+|   |   |   high_blood_pressure = no: survived (5.25/0.86)
+|   |   |   high_blood_pressure = yes: died (7.72/0.22)
+|   |   age = [51-60]
+|   |   |   anaemia = yes
+|   |   |   |   platelets = normal
+|   |   |   |   |   high_blood_pressure = no
+|   |   |   |   |   |   sex = M: died (11.34/1.11)
+|   |   |   |   |   |   sex = F
+|   |   |   |   |   |   |   serum_creatinine = high: survived (3.28/0.29)
+|   |   |   |   |   |   |   serum_creatinine = normal: died (3.03)
+|   |   |   |   |   |   |   serum_creatinine = low: died (0.0)
+|   |   |   |   |   high_blood_pressure = yes: survived (3.18)
+|   |   |   |   platelets = low: survived (0.79)
+|   |   |   |   platelets = high: died (4.02)
+|   |   |   |   platelets = very-high: died (0.0)
+|   |   |   anaemia = no
+|   |   |   |   serum_sodium = normal: survived (4.5)
+|   |   |   |   serum_sodium = low: died (2.15)
+|   |   |   |   serum_sodium = high: survived (0.0)
+|   |   age = 70plus: died (8.11)
+|   CPK = high
+|   |   age = [61-70]
+|   |   |   diabetes = yes: died (9.54/2.53)
+|   |   |   diabetes = no
+|   |   |   |   high_blood_pressure = no: survived (6.27/0.86)
+|   |   |   |   high_blood_pressure = yes: died (9.38/1.97)
+|   |   age = [40-50]
+|   |   |   diabetes = yes
+|   |   |   |   serum_sodium = normal
+|   |   |   |   |   anaemia = yes: died (2.88)
+|   |   |   |   |   anaemia = no
+|   |   |   |   |   |   smoking = no: survived (8.56)
+|   |   |   |   |   |   smoking = yes: died (4.51/1.14)
+|   |   |   |   serum_sodium = low: survived (8.67)
+|   |   |   |   serum_sodium = high: survived (0.0)
+|   |   |   diabetes = no: died (13.32/2.77)
+|   |   age = [51-60]
+|   |   |   sex = M: survived (10.27/1.0)
+|   |   |   sex = F: died (3.11/0.92)
+|   |   age = 70plus
+|   |   |   high_blood_pressure = no
+|   |   |   |   diabetes = yes: survived (3.99)
+|   |   |   |   diabetes = no: died (7.9/2.45)
+|   |   |   high_blood_pressure = yes: died (10.33/2.22)
+|   CPK = very-high
+|   |   age = [61-70]: survived (1.3)
+|   |   age = [40-50]
+|   |   |   diabetes = yes
+|   |   |   |   anaemia = yes: survived (2.93/1.0)
+|   |   |   |   anaemia = no: died (3.17/0.29)
+|   |   |   diabetes = no: survived (2.2)
+|   |   age = [51-60]: died (9.07/3.13)
+|   |   age = 70plus: survived (1.11)
+|   CPK = severely-high: died (3.59/1.01)
+ejection_fraction = normal
+|   serum_creatinine = high: survived (10.57/2.27)
+|   serum_creatinine = normal
+|   |   age = [61-70]: survived (7.02/2.69)
+|   |   age = [40-50]: survived (2.52)
+|   |   age = [51-60]
+|   |   |   CPK = normal: survived (3.43)
+|   |   |   CPK = high: died (3.51/0.07)
+|   |   |   CPK = very-high: survived (0.07)
+|   |   |   CPK = severely-high: survived (0.0)
+|   |   age = 70plus: died (3.44)
+|   serum_creatinine = low: survived (0.0)
+ejection_fraction = borderline
+|   diabetes = yes
+|   |   anaemia = yes: died (5.1)
+|   |   anaemia = no
+|   |   |   age = [61-70]: died (3.94/0.07)
+|   |   |   age = [40-50]: died (0.0)
+|   |   |   age = [51-60]: died (0.0)
+|   |   |   age = 70plus: survived (2.99)
+|   diabetes = no
+|   |   serum_sodium = normal: survived (5.34/1.0)
+|   |   serum_sodium = low: died (4.74/1.7)
+|   |   serum_sodium = high: survived (0.22)
+ejection_fraction = mildly-low
+|   high_blood_pressure = no: survived (15.31/2.19)
+|   high_blood_pressure = yes: died (15.14/5.46)
+
+Number of Leaves  : 	57
+
+Size of the tree : 	90
+
+
+Weight: 1.75
+
+J48 pruned tree
+------------------
+
+serum_creatinine = high
+|   ejection_fraction = low
+|   |   platelets = normal
+|   |   |   anaemia = yes
+|   |   |   |   CPK = normal: died (9.97/1.89)
+|   |   |   |   CPK = high: survived (5.23/0.91)
+|   |   |   |   CPK = very-high: died (0.0)
+|   |   |   |   CPK = severely-high: died (0.0)
+|   |   |   anaemia = no: survived (21.93/8.29)
+|   |   platelets = low: died (4.06/1.42)
+|   |   platelets = high: died (2.36)
+|   |   platelets = very-high: died (2.26)
+|   ejection_fraction = normal: died (12.52/4.87)
+|   ejection_fraction = borderline: survived (3.7)
+|   ejection_fraction = mildly-low
+|   |   CPK = normal: survived (2.8/0.87)
+|   |   CPK = high: died (7.5/0.13)
+|   |   CPK = very-high: survived (1.58)
+|   |   CPK = severely-high: died (0.0)
+serum_creatinine = normal
+|   ejection_fraction = low
+|   |   platelets = normal
+|   |   |   CPK = normal
+|   |   |   |   serum_sodium = normal
+|   |   |   |   |   diabetes = yes
+|   |   |   |   |   |   smoking = no: survived (2.56)
+|   |   |   |   |   |   smoking = yes: died (6.06/2.01)
+|   |   |   |   |   diabetes = no: died (12.55/3.02)
+|   |   |   |   serum_sodium = low
+|   |   |   |   |   anaemia = yes: survived (3.92)
+|   |   |   |   |   anaemia = no: died (2.38/0.65)
+|   |   |   |   serum_sodium = high: died (0.0)
+|   |   |   CPK = high
+|   |   |   |   sex = M
+|   |   |   |   |   diabetes = yes: survived (15.45/3.36)
+|   |   |   |   |   diabetes = no
+|   |   |   |   |   |   anaemia = yes: died (5.29/1.6)
+|   |   |   |   |   |   anaemia = no
+|   |   |   |   |   |   |   serum_sodium = normal: survived (14.5/3.16)
+|   |   |   |   |   |   |   serum_sodium = low
+|   |   |   |   |   |   |   |   high_blood_pressure = no: died (7.05/0.59)
+|   |   |   |   |   |   |   |   high_blood_pressure = yes: survived (3.75)
+|   |   |   |   |   |   |   serum_sodium = high: survived (0.0)
+|   |   |   |   sex = F
+|   |   |   |   |   diabetes = yes
+|   |   |   |   |   |   serum_sodium = normal: died (5.79/1.86)
+|   |   |   |   |   |   serum_sodium = low: survived (2.81)
+|   |   |   |   |   |   serum_sodium = high: survived (0.0)
+|   |   |   |   |   diabetes = no: survived (7.67)
+|   |   |   CPK = very-high
+|   |   |   |   serum_sodium = normal: survived (10.32/2.14)
+|   |   |   |   serum_sodium = low: died (2.37/0.59)
+|   |   |   |   serum_sodium = high: survived (0.0)
+|   |   |   CPK = severely-high: survived (4.92/1.51)
+|   |   platelets = low
+|   |   |   anaemia = yes
+|   |   |   |   age = [61-70]: survived (0.0)
+|   |   |   |   age = [40-50]: died (3.96)
+|   |   |   |   age = [51-60]: survived (5.79)
+|   |   |   |   age = 70plus: died (0.59)
+|   |   |   anaemia = no: survived (7.29)
+|   |   platelets = high
+|   |   |   sex = M: died (3.37)
+|   |   |   sex = F: survived (2.01)
+|   |   platelets = very-high: survived (4.68)
+|   ejection_fraction = normal
+|   |   high_blood_pressure = no
+|   |   |   anaemia = yes: died (12.5/1.41)
+|   |   |   anaemia = no
+|   |   |   |   smoking = no: survived (2.31)
+|   |   |   |   smoking = yes: died (2.58/0.56)
+|   |   high_blood_pressure = yes: survived (2.02)
+|   ejection_fraction = borderline
+|   |   platelets = normal
+|   |   |   diabetes = yes: died (7.02/1.75)
+|   |   |   diabetes = no: survived (5.79/1.78)
+|   |   platelets = low: died (4.06/0.68)
+|   |   platelets = high: survived (0.26)
+|   |   platelets = very-high: died (0.0)
+|   ejection_fraction = mildly-low
+|   |   smoking = no: survived (20.88/1.69)
+|   |   smoking = yes
+|   |   |   diabetes = yes: died (3.82/0.67)
+|   |   |   diabetes = no: survived (2.63)
+serum_creatinine = low: survived (0.14)
+
+Number of Leaves  : 	55
+
+Size of the tree : 	86
+
+
+Weight: 1.56
+
+J48 pruned tree
+------------------
+
+platelets = normal
+|   anaemia = yes
+|   |   CPK = normal
+|   |   |   age = [61-70]
+|   |   |   |   high_blood_pressure = no
+|   |   |   |   |   serum_creatinine = high: survived (6.5/0.43)
+|   |   |   |   |   serum_creatinine = normal
+|   |   |   |   |   |   diabetes = yes: survived (2.62)
+|   |   |   |   |   |   diabetes = no: died (5.49)
+|   |   |   |   |   serum_creatinine = low: survived (0.0)
+|   |   |   |   high_blood_pressure = yes: survived (7.0/0.58)
+|   |   |   age = [40-50]: survived (6.22/2.93)
+|   |   |   age = [51-60]
+|   |   |   |   high_blood_pressure = no
+|   |   |   |   |   sex = M
+|   |   |   |   |   |   serum_sodium = normal: died (3.99/0.46)
+|   |   |   |   |   |   serum_sodium = low: survived (2.37/0.1)
+|   |   |   |   |   |   serum_sodium = high: died (0.0)
+|   |   |   |   |   sex = F: survived (8.34/1.68)
+|   |   |   |   high_blood_pressure = yes: survived (4.71)
+|   |   |   age = 70plus: died (9.88/2.12)
+|   |   CPK = high
+|   |   |   serum_creatinine = high
+|   |   |   |   sex = M
+|   |   |   |   |   age = [61-70]: died (2.57/0.95)
+|   |   |   |   |   age = [40-50]: survived (0.0)
+|   |   |   |   |   age = [51-60]: survived (2.95)
+|   |   |   |   |   age = 70plus: died (2.21)
+|   |   |   |   sex = F: died (2.45)
+|   |   |   serum_creatinine = normal
+|   |   |   |   serum_sodium = normal
+|   |   |   |   |   diabetes = yes: died (3.09/0.48)
+|   |   |   |   |   diabetes = no: survived (10.0/2.23)
+|   |   |   |   serum_sodium = low: survived (6.35)
+|   |   |   |   serum_sodium = high: survived (0.0)
+|   |   |   serum_creatinine = low: survived (0.0)
+|   |   CPK = very-high: survived (5.78)
+|   |   CPK = severely-high: survived (0.0)
+|   anaemia = no
+|   |   serum_creatinine = high
+|   |   |   ejection_fraction = low: died (32.12/8.26)
+|   |   |   ejection_fraction = normal
+|   |   |   |   age = [61-70]: died (2.04)
+|   |   |   |   age = [40-50]: survived (0.0)
+|   |   |   |   age = [51-60]: died (0.13)
+|   |   |   |   age = 70plus: survived (5.12)
+|   |   |   ejection_fraction = borderline: survived (0.08)
+|   |   |   ejection_fraction = mildly-low: died (6.31/1.17)
+|   |   serum_creatinine = normal
+|   |   |   CPK = normal
+|   |   |   |   sex = M: survived (24.49/4.6)
+|   |   |   |   sex = F: died (3.11/0.58)
+|   |   |   CPK = high
+|   |   |   |   ejection_fraction = low
+|   |   |   |   |   sex = M
+|   |   |   |   |   |   smoking = no
+|   |   |   |   |   |   |   age = [61-70]: survived (1.71)
+|   |   |   |   |   |   |   age = [40-50]: died (7.41/1.79)
+|   |   |   |   |   |   |   age = [51-60]: survived (0.0)
+|   |   |   |   |   |   |   age = 70plus: survived (5.61/1.08)
+|   |   |   |   |   |   smoking = yes
+|   |   |   |   |   |   |   age = [61-70]
+|   |   |   |   |   |   |   |   high_blood_pressure = no: died (6.3)
+|   |   |   |   |   |   |   |   high_blood_pressure = yes: survived (4.54)
+|   |   |   |   |   |   |   age = [40-50]
+|   |   |   |   |   |   |   |   high_blood_pressure = no: survived (2.33)
+|   |   |   |   |   |   |   |   high_blood_pressure = yes: died (4.54)
+|   |   |   |   |   |   |   age = [51-60]: died (0.0)
+|   |   |   |   |   |   |   age = 70plus: died (5.12)
+|   |   |   |   |   sex = F: survived (8.62/1.08)
+|   |   |   |   ejection_fraction = normal: survived (0.6)
+|   |   |   |   ejection_fraction = borderline: died (5.2/0.08)
+|   |   |   |   ejection_fraction = mildly-low: survived (3.0/0.95)
+|   |   |   CPK = very-high
+|   |   |   |   diabetes = yes: died (5.56/0.69)
+|   |   |   |   diabetes = no: survived (6.47/2.36)
+|   |   |   CPK = severely-high: died (6.42/2.06)
+|   |   serum_creatinine = low: survived (0.09)
+platelets = low
+|   age = [61-70]: survived (3.13)
+|   age = [40-50]
+|   |   diabetes = yes: died (2.54)
+|   |   diabetes = no: survived (5.39/0.76)
+|   age = [51-60]: survived (7.26/0.77)
+|   age = 70plus: died (3.33/0.5)
+platelets = high: died (4.92/1.45)
+platelets = very-high: survived (7.01/1.64)
+
+Number of Leaves  : 	58
+
+Size of the tree : 	88
+
+
+Weight: 1.71
+
+J48 pruned tree
+------------------
+
+platelets = normal
+|   serum_creatinine = high
+|   |   ejection_fraction = low
+|   |   |   anaemia = yes
+|   |   |   |   CPK = normal
+|   |   |   |   |   sex = M: died (8.22/0.22)
+|   |   |   |   |   sex = F
+|   |   |   |   |   |   diabetes = yes: died (4.23)
+|   |   |   |   |   |   diabetes = no: survived (2.98)
+|   |   |   |   CPK = high: survived (5.64/1.54)
+|   |   |   |   CPK = very-high: died (0.0)
+|   |   |   |   CPK = severely-high: died (0.0)
+|   |   |   anaemia = no
+|   |   |   |   CPK = normal: survived (8.69/0.36)
+|   |   |   |   CPK = high
+|   |   |   |   |   sex = M
+|   |   |   |   |   |   age = [61-70]: died (4.5)
+|   |   |   |   |   |   age = [40-50]
+|   |   |   |   |   |   |   smoking = no: survived (3.99)
+|   |   |   |   |   |   |   smoking = yes
+|   |   |   |   |   |   |   |   high_blood_pressure = no: died (3.36)
+|   |   |   |   |   |   |   |   high_blood_pressure = yes: survived (3.34)
+|   |   |   |   |   |   age = [51-60]: survived (1.14)
+|   |   |   |   |   |   age = 70plus: survived (4.77/1.43)
+|   |   |   |   |   sex = F: died (2.55/0.26)
+|   |   |   |   CPK = very-high: survived (8.71/2.14)
+|   |   |   |   CPK = severely-high: survived (0.0)
+|   |   ejection_fraction = normal: survived (9.58/2.43)
+|   |   ejection_fraction = borderline: survived (5.77)
+|   |   ejection_fraction = mildly-low
+|   |   |   age = [61-70]: survived (3.55)
+|   |   |   age = [40-50]: survived (0.49/0.23)
+|   |   |   age = [51-60]: died (1.9/0.56)
+|   |   |   age = 70plus: died (2.54)
+|   serum_creatinine = normal
+|   |   high_blood_pressure = no
+|   |   |   serum_sodium = normal
+|   |   |   |   smoking = no
+|   |   |   |   |   diabetes = yes
+|   |   |   |   |   |   CPK = normal: survived (3.25)
+|   |   |   |   |   |   CPK = high: survived (8.12/1.17)
+|   |   |   |   |   |   CPK = very-high: died (3.62/0.75)
+|   |   |   |   |   |   CPK = severely-high: survived (0.0)
+|   |   |   |   |   diabetes = no: died (21.07/5.26)
+|   |   |   |   smoking = yes: survived (24.55/4.13)
+|   |   |   serum_sodium = low
+|   |   |   |   anaemia = yes: survived (4.25/0.81)
+|   |   |   |   anaemia = no: died (21.83/5.35)
+|   |   |   serum_sodium = high: survived (0.0)
+|   |   high_blood_pressure = yes
+|   |   |   serum_sodium = normal
+|   |   |   |   age = [61-70]
+|   |   |   |   |   sex = M
+|   |   |   |   |   |   ejection_fraction = low
+|   |   |   |   |   |   |   anaemia = yes: died (7.29)
+|   |   |   |   |   |   |   anaemia = no: survived (3.69)
+|   |   |   |   |   |   ejection_fraction = normal: survived (0.19)
+|   |   |   |   |   |   ejection_fraction = borderline: died (4.5)
+|   |   |   |   |   |   ejection_fraction = mildly-low: died (6.24)
+|   |   |   |   |   sex = F: survived (5.62)
+|   |   |   |   age = [40-50]: died (10.4/2.53)
+|   |   |   |   age = [51-60]: survived (5.48/0.16)
+|   |   |   |   age = 70plus: died (11.35/1.73)
+|   |   |   serum_sodium = low
+|   |   |   |   CPK = normal: survived (4.23/0.26)
+|   |   |   |   CPK = high: survived (4.22)
+|   |   |   |   CPK = very-high: died (3.52)
+|   |   |   |   CPK = severely-high: survived (0.0)
+|   |   |   serum_sodium = high: survived (0.05)
+|   serum_creatinine = low: survived (0.05)
+platelets = low
+|   smoking = no
+|   |   age = [61-70]: survived (1.24)
+|   |   age = [40-50]: died (5.82/1.84)
+|   |   age = [51-60]
+|   |   |   serum_sodium = normal: survived (3.48)
+|   |   |   serum_sodium = low: died (2.21)
+|   |   |   serum_sodium = high: survived (0.0)
+|   |   age = 70plus: died (1.43)
+|   smoking = yes: survived (4.03/0.52)
+platelets = high: survived (6.79/2.05)
+platelets = very-high: died (8.52/3.17)
+
+Number of Leaves  : 	55
+
+Size of the tree : 	83
+
+
+Weight: 1.79
+
+Number of performed Iterations: 10
+
+
+Time taken to build model: 0.01 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances         184               67.3993 %
+Incorrectly Classified Instances        89               32.6007 %
+Kappa statistic                          0.2518
+Mean absolute error                      0.3369
+Root mean squared error                  0.5433
+Relative absolute error                 76.1349 %
+Root relative squared error            115.5628 %
+Total Number of Instances              273     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.478    0.230    0.506      0.478    0.491      0.252    0.639     0.468     died
+                 0.770    0.522    0.750      0.770    0.760      0.252    0.639     0.773     survived
+Weighted Avg.    0.674    0.426    0.670      0.674    0.672      0.252    0.639     0.672     
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+  43  47 |   a = died
+  42 141 |   b = survived
+
+
+
+RandomForest
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.RandomForest -P 100 -I 100 -num-slots 1 -K 0 -M 1.0 -V 0.001 -S 1
+Relation:     heart-failure
+Instances:    273
+Attributes:   12
+              age
+              anaemia
+              CPK
+              diabetes
+              ejection_fraction
+              high_blood_pressure
+              platelets
+              serum_creatinine
+              serum_sodium
+              sex
+              smoking
+              class
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+RandomForest
+
+Bagging with 100 iterations and base learner
+
+weka.classifiers.trees.RandomTree -K 0 -M 1.0 -V 0.001 -S 1 -do-not-check-capabilities
+
+Time taken to build model: 0.04 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances         186               68.1319 %
+Incorrectly Classified Instances        87               31.8681 %
+Kappa statistic                          0.2195
+Mean absolute error                      0.3734
+Root mean squared error                  0.4501
+Relative absolute error                 84.4037 %
+Root relative squared error             95.7524 %
+Total Number of Instances              273     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.367    0.164    0.524      0.367    0.431      0.226    0.694     0.546     died
+                 0.836    0.633    0.729      0.836    0.779      0.226    0.694     0.815     survived
+Weighted Avg.    0.681    0.479    0.661      0.681    0.664      0.226    0.694     0.726     
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+  33  57 |   a = died
+  30 153 |   b = survived
+
+
+SMO
+=== Run information ===
+
+Scheme:       weka.classifiers.functions.SMO -C 1.0 -L 0.001 -P 1.0E-12 -N 0 -V -1 -W 1 -K "weka.classifiers.functions.supportVector.PolyKernel -E 1.0 -C 250007" -calibrator "weka.classifiers.functions.Logistic -R 1.0E-8 -M -1 -num-decimal-places 4"
+Relation:     heart-failure
+Instances:    273
+Attributes:   12
+              age
+              anaemia
+              CPK
+              diabetes
+              ejection_fraction
+              high_blood_pressure
+              platelets
+              serum_creatinine
+              serum_sodium
+              sex
+              smoking
+              class
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+SMO
+
+Kernel used:
+  Linear Kernel: K(x,y) = <x,y>
+
+Classifier for classes: died, survived
+
+BinarySMO
+
+Machine linear: showing attribute weights, not support vectors.
+
+         0.0007 * (normalized) age=[61-70]
+ +       0.0007 * (normalized) age=[40-50]
+ +       0.0003 * (normalized) age=[51-60]
+ +      -0.0017 * (normalized) age=70plus
+ +       0.0009 * (normalized) anaemia=no
+ +       0.4991 * (normalized) CPK=normal
+ +       0.4991 * (normalized) CPK=high
+ +       0.5001 * (normalized) CPK=very-high
+ +      -1.4982 * (normalized) CPK=severely-high
+ +       0.0008 * (normalized) diabetes=no
+ +      -0.0009 * (normalized) ejection_fraction=low
+ +      -0.0012 * (normalized) ejection_fraction=normal
+ +       0.0021 * (normalized) ejection_fraction=borderline
+ +      -0      * (normalized) ejection_fraction=mildly-low
+ +      -0.0003 * (normalized) high_blood_pressure=yes
+ +       0.0002 * (normalized) platelets=normal
+ +      -0.0002 * (normalized) platelets=low
+ +      -0.0005 * (normalized) platelets=high
+ +       0.0006 * (normalized) platelets=very-high
+ +      -1.3312 * (normalized) serum_creatinine=high
+ +       0.6667 * (normalized) serum_creatinine=normal
+ +       0.6645 * (normalized) serum_creatinine=low
+ +       0.0011 * (normalized) serum_sodium=normal
+ +       0.0001 * (normalized) serum_sodium=low
+ +      -0.0012 * (normalized) serum_sodium=high
+ +       0.0001 * (normalized) sex=F
+ +       0.0001 * (normalized) smoking=yes
+ -       0.167 
+
+Number of kernel evaluations: 29339 (89.299% cached)
+
+
+
+Time taken to build model: 0.02 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances         198               72.5275 %
+Incorrectly Classified Instances        75               27.4725 %
+Kappa statistic                          0.3585
+Mean absolute error                      0.2747
+Root mean squared error                  0.5241
+Relative absolute error                 62.0912 %
+Root relative squared error            111.4952 %
+Total Number of Instances              273     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.522    0.175    0.595      0.522    0.556      0.360    0.674     0.468     died
+                 0.825    0.478    0.778      0.825    0.801      0.360    0.674     0.759     survived
+Weighted Avg.    0.725    0.378    0.718      0.725    0.720      0.360    0.674     0.663     
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+  47  43 |   a = died
+  32 151 |   b = survived
+
+
+
+
+MultilayerPerceptron
+=== Run information ===
+
+Scheme:       weka.classifiers.functions.MultilayerPerceptron -L 0.3 -M 0.2 -N 500 -V 0 -S 0 -E 20 -H a
+Relation:     heart-failure
+Instances:    273
+Attributes:   12
+              age
+              anaemia
+              CPK
+              diabetes
+              ejection_fraction
+              high_blood_pressure
+              platelets
+              serum_creatinine
+              serum_sodium
+              sex
+              smoking
+              class
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+Sigmoid Node 0
+    Inputs    Weights
+    Threshold    8.833366319643401
+    Node 2    -6.61754671819272
+    Node 3    -7.555840609691154
+    Node 4    -1.9916558947078715
+    Node 5    -0.6700689244533827
+    Node 6    -6.8539796056966305
+    Node 7    -3.0193663264851964
+    Node 8    -8.32625191406795
+    Node 9    -4.2529284208432125
+    Node 10    7.071236733156957
+    Node 11    6.3250301735799885
+    Node 12    -4.119865984658308
+    Node 13    -1.7252505820016444
+    Node 14    -5.817734713752021
+    Node 15    -2.688594902103389
+Sigmoid Node 1
+    Inputs    Weights
+    Threshold    -8.832356701143073
+    Node 2    6.620533630200395
+    Node 3    7.55531928787704
+    Node 4    1.993892083950797
+    Node 5    0.6637235940786026
+    Node 6    6.851280434335852
+    Node 7    3.0185508051472145
+    Node 8    8.326362707230558
+    Node 9    4.24737363160426
+    Node 10    -7.07216114428749
+    Node 11    -6.325530548513569
+    Node 12    4.1192989355600815
+    Node 13    1.736337013911994
+    Node 14    5.8191219672307914
+    Node 15    2.6885250253252675
+Sigmoid Node 2
+    Inputs    Weights
+    Threshold    -1.1760228751737067
+    Attrib age=[61-70]    0.6257776975930724
+    Attrib age=[40-50]    1.0132386399748536
+    Attrib age=[51-60]    -1.7483051705395074
+    Attrib age=70plus    2.3178049576791726
+    Attrib anaemia=no    -1.5590261643529724
+    Attrib CPK=normal    -1.982662195184119
+    Attrib CPK=high    0.07620229652136011
+    Attrib CPK=very-high    2.5913905278021128
+    Attrib CPK=severely-high    1.5380273562944236
+    Attrib diabetes=no    2.638824885482272
+    Attrib ejection_fraction=low    0.1542734644596107
+    Attrib ejection_fraction=normal    -0.1494481489984949
+    Attrib ejection_fraction=borderline    0.881964751716852
+    Attrib ejection_fraction=mildly-low    1.3204671120708236
+    Attrib high_blood_pressure=yes    -3.8477357148554336
+    Attrib platelets=normal    1.2903453129025815
+    Attrib platelets=low    -1.9841188923700714
+    Attrib platelets=high    1.232729683801921
+    Attrib platelets=very-high    1.7506784988742174
+    Attrib serum_creatinine=high    -1.3755547165552608
+    Attrib serum_creatinine=normal    1.2362525964011934
+    Attrib serum_creatinine=low    1.3219289628135504
+    Attrib serum_sodium=normal    0.599027081621289
+    Attrib serum_sodium=low    -0.4005125306871428
+    Attrib serum_sodium=high    0.9782427293443537
+    Attrib sex=F    1.072705286036453
+    Attrib smoking=yes    2.235510495493603
+Sigmoid Node 3
+    Inputs    Weights
+    Threshold    -0.8025737212583199
+    Attrib age=[61-70]    2.8082650738535397
+    Attrib age=[40-50]    0.0890804027378486
+    Attrib age=[51-60]    -0.2889514990463612
+    Attrib age=70plus    -0.9250631949524295
+    Attrib anaemia=no    -0.03011680891037357
+    Attrib CPK=normal    5.387074856729607
+    Attrib CPK=high    0.35850625280120485
+    Attrib CPK=very-high    -1.4958674971727572
+    Attrib CPK=severely-high    -2.5078745821749164
+    Attrib diabetes=no    -6.802155607127389
+    Attrib ejection_fraction=low    1.8123913443151916
+    Attrib ejection_fraction=normal    0.34968385473447516
+    Attrib ejection_fraction=borderline    -0.307910226812593
+    Attrib ejection_fraction=mildly-low    -0.2800091561860064
+    Attrib high_blood_pressure=yes    2.1233622975117434
+    Attrib platelets=normal    0.60631355949476
+    Attrib platelets=low    1.926064331000828
+    Attrib platelets=high    0.0650154341213177
+    Attrib platelets=very-high    -1.0323615884738566
+    Attrib serum_creatinine=high    0.12632629977611948
+    Attrib serum_creatinine=normal    -0.3210533899842272
+    Attrib serum_creatinine=low    0.9866983810129482
+    Attrib serum_sodium=normal    -3.396484306882801
+    Attrib serum_sodium=low    3.3909426680122294
+    Attrib serum_sodium=high    0.8019582991345937
+    Attrib sex=F    -2.6473712426031324
+    Attrib smoking=yes    -3.692613189326065
+Sigmoid Node 4
+    Inputs    Weights
+    Threshold    -0.2778590400860218
+    Attrib age=[61-70]    -0.4791074404041994
+    Attrib age=[40-50]    1.190174047769112
+    Attrib age=[51-60]    0.1670589388283966
+    Attrib age=70plus    -0.3240079120452663
+    Attrib anaemia=no    -0.7033310172833935
+    Attrib CPK=normal    1.1409440105029367
+    Attrib CPK=high    -1.5928870570641744
+    Attrib CPK=very-high    1.3151847784553727
+    Attrib CPK=severely-high    -0.3346467870908046
+    Attrib diabetes=no    0.26207336465742703
+    Attrib ejection_fraction=low    -1.171479583148393
+    Attrib ejection_fraction=normal    0.7242930811521969
+    Attrib ejection_fraction=borderline    0.6311582987307284
+    Attrib ejection_fraction=mildly-low    0.3314688550786003
+    Attrib high_blood_pressure=yes    1.2089118914570935
+    Attrib platelets=normal    -0.045808269092564254
+    Attrib platelets=low    0.26631886927996423
+    Attrib platelets=high    0.21413585969300844
+    Attrib platelets=very-high    0.3211770069182048
+    Attrib serum_creatinine=high    -0.07451777286314823
+    Attrib serum_creatinine=normal    -0.060948759923821635
+    Attrib serum_creatinine=low    0.47229110325103474
+    Attrib serum_sodium=normal    0.7656289739746204
+    Attrib serum_sodium=low    -0.5169589748444516
+    Attrib serum_sodium=high    0.07778038058568588
+    Attrib sex=F    -0.8897405611759134
+    Attrib smoking=yes    -0.39056769709789596
+Sigmoid Node 5
+    Inputs    Weights
+    Threshold    -0.372543821916785
+    Attrib age=[61-70]    -0.40141925931138156
+    Attrib age=[40-50]    0.5842329216056429
+    Attrib age=[51-60]    0.7771433628113636
+    Attrib age=70plus    -0.27913952714369494
+    Attrib anaemia=no    0.4584749117573701
+    Attrib CPK=normal    0.7214257062516835
+    Attrib CPK=high    -0.20757622862485559
+    Attrib CPK=very-high    0.4360980935344161
+    Attrib CPK=severely-high    -0.25418861867979875
+    Attrib diabetes=no    -0.31935545665579546
+    Attrib ejection_fraction=low    -1.134219002346668
+    Attrib ejection_fraction=normal    0.7590381663712468
+    Attrib ejection_fraction=borderline    0.2396098652983127
+    Attrib ejection_fraction=mildly-low    0.7863989863826539
+    Attrib high_blood_pressure=yes    0.0653043664080714
+    Attrib platelets=normal    -0.2532903380297669
+    Attrib platelets=low    0.24158670255587453
+    Attrib platelets=high    0.3909117687815801
+    Attrib platelets=very-high    0.37978866691027485
+    Attrib serum_creatinine=high    -0.4064146293177502
+    Attrib serum_creatinine=normal    0.2296213742010827
+    Attrib serum_creatinine=low    0.5006483680172201
+    Attrib serum_sodium=normal    0.24540017251346755
+    Attrib serum_sodium=low    -0.11192228051243908
+    Attrib serum_sodium=high    0.17934842105822701
+    Attrib sex=F    -0.14250257828407276
+    Attrib smoking=yes    -0.19965137958848125
+Sigmoid Node 6
+    Inputs    Weights
+    Threshold    -0.6887652180566589
+    Attrib age=[61-70]    -2.635395567984463
+    Attrib age=[40-50]    2.4236263502955704
+    Attrib age=[51-60]    2.2245115203633916
+    Attrib age=70plus    -0.6655446765874304
+    Attrib anaemia=no    2.181459506486145
+    Attrib CPK=normal    4.167359020150567
+    Attrib CPK=high    -0.7708054040343557
+    Attrib CPK=very-high    0.024273678973461207
+    Attrib CPK=severely-high    -1.9730429626087806
+    Attrib diabetes=no    -0.10426958433433096
+    Attrib ejection_fraction=low    -2.784814099816396
+    Attrib ejection_fraction=normal    0.6818066527869967
+    Attrib ejection_fraction=borderline    0.37319652938484954
+    Attrib ejection_fraction=mildly-low    3.1084903258546794
+    Attrib high_blood_pressure=yes    2.1934807691743523
+    Attrib platelets=normal    -1.2300919987744505
+    Attrib platelets=low    1.0369400959979682
+    Attrib platelets=high    0.06803231382193639
+    Attrib platelets=very-high    1.3845472604231641
+    Attrib serum_creatinine=high    -1.3799591557307407
+    Attrib serum_creatinine=normal    1.2612831484047817
+    Attrib serum_creatinine=low    0.8800316330886957
+    Attrib serum_sodium=normal    1.6149840630558503
+    Attrib serum_sodium=low    -1.4292738657868707
+    Attrib serum_sodium=high    0.48295277040431855
+    Attrib sex=F    -0.5441696214640133
+    Attrib smoking=yes    -1.8509132559780637
+Sigmoid Node 7
+    Inputs    Weights
+    Threshold    -0.014666835161122773
+    Attrib age=[61-70]    -1.7326539809442763
+    Attrib age=[40-50]    0.7052923436892969
+    Attrib age=[51-60]    0.0434539091777545
+    Attrib age=70plus    0.9865273688407684
+    Attrib anaemia=no    1.5114277546074517
+    Attrib CPK=normal    -0.6562997428087822
+    Attrib CPK=high    0.15881797193398953
+    Attrib CPK=very-high    0.5295645778113622
+    Attrib CPK=severely-high    -0.08747036081681527
+    Attrib diabetes=no    -0.19683489379561858
+    Attrib ejection_fraction=low    -0.736929177835123
+    Attrib ejection_fraction=normal    0.44822851911290384
+    Attrib ejection_fraction=borderline    0.5458827181619883
+    Attrib ejection_fraction=mildly-low    -0.2592311112649105
+    Attrib high_blood_pressure=yes    -0.41591496795087984
+    Attrib platelets=normal    0.3146293817381863
+    Attrib platelets=low    -0.4266285371861783
+    Attrib platelets=high    0.0466984603845148
+    Attrib platelets=very-high    0.08007976843771286
+    Attrib serum_creatinine=high    0.003133661308083193
+    Attrib serum_creatinine=normal    -0.1094885962344143
+    Attrib serum_creatinine=low    0.05265262114535173
+    Attrib serum_sodium=normal    0.18667734232170108
+    Attrib serum_sodium=low    -0.013022428029386586
+    Attrib serum_sodium=high    -0.166225142158279
+    Attrib sex=F    -0.48538849728389377
+    Attrib smoking=yes    0.5766650124571442
+Sigmoid Node 8
+    Inputs    Weights
+    Threshold    -0.38457573866186123
+    Attrib age=[61-70]    2.661331965060625
+    Attrib age=[40-50]    -1.2726083102494632
+    Attrib age=[51-60]    -1.4997398203939487
+    Attrib age=70plus    0.7571047930707121
+    Attrib anaemia=no    5.410641956084003
+    Attrib CPK=normal    3.3294138712937653
+    Attrib CPK=high    -0.7393008523129448
+    Attrib CPK=very-high    -0.4803077352862498
+    Attrib CPK=severely-high    -1.4843086643128403
+    Attrib diabetes=no    2.5894631491962166
+    Attrib ejection_fraction=low    0.860617509494578
+    Attrib ejection_fraction=normal    3.2339664744312535
+    Attrib ejection_fraction=borderline    -3.610241983893704
+    Attrib ejection_fraction=mildly-low    0.12053584624976975
+    Attrib high_blood_pressure=yes    1.2330791372294798
+    Attrib platelets=normal    -1.7719406950577874
+    Attrib platelets=low    -0.9976532563131753
+    Attrib platelets=high    0.263727003895082
+    Attrib platelets=very-high    3.146338279859176
+    Attrib serum_creatinine=high    -1.6963904923249458
+    Attrib serum_creatinine=normal    1.3742523867980683
+    Attrib serum_creatinine=low    0.550836893290926
+    Attrib serum_sodium=normal    1.3283584468562302
+    Attrib serum_sodium=low    -0.8502037726304696
+    Attrib serum_sodium=high    -0.15572356847510915
+    Attrib sex=F    5.771005138223234
+    Attrib smoking=yes    -1.260877359996773
+Sigmoid Node 9
+    Inputs    Weights
+    Threshold    -0.9148532796470328
+    Attrib age=[61-70]    1.8425196789389828
+    Attrib age=[40-50]    -1.1152454435218742
+    Attrib age=[51-60]    2.403570226544825
+    Attrib age=70plus    -1.3308827416025184
+    Attrib anaemia=no    -0.626615022840647
+    Attrib CPK=normal    -0.7100413799790308
+    Attrib CPK=high    0.3883286394561649
+    Attrib CPK=very-high    1.5202770196630142
+    Attrib CPK=severely-high    0.6546615226452147
+    Attrib diabetes=no    0.8758073831277573
+    Attrib ejection_fraction=low    -0.33122572797021765
+    Attrib ejection_fraction=normal    -0.7456337753423538
+    Attrib ejection_fraction=borderline    1.2481743221705277
+    Attrib ejection_fraction=mildly-low    1.603779398890188
+    Attrib high_blood_pressure=yes    -2.269621463033327
+    Attrib platelets=normal    -0.33798382558212803
+    Attrib platelets=low    1.7475368754269602
+    Attrib platelets=high    -0.014772003346945055
+    Attrib platelets=very-high    0.536878696291962
+    Attrib serum_creatinine=high    1.166454388686039
+    Attrib serum_creatinine=normal    -1.2637541632562612
+    Attrib serum_creatinine=low    1.043947080526133
+    Attrib serum_sodium=normal    2.0791163137328232
+    Attrib serum_sodium=low    -1.5351891761724974
+    Attrib serum_sodium=high    0.38040151687967144
+    Attrib sex=F    0.5842992781833857
+    Attrib smoking=yes    1.1984330013034272
+Sigmoid Node 10
+    Inputs    Weights
+    Threshold    -0.02199688109888969
+    Attrib age=[61-70]    -4.048725093212274
+    Attrib age=[40-50]    -1.2523547680139393
+    Attrib age=[51-60]    1.1035023230522656
+    Attrib age=70plus    4.216118687305771
+    Attrib anaemia=no    -2.1345194447514504
+    Attrib CPK=normal    2.868410205738581
+    Attrib CPK=high    -3.9160691500832
+    Attrib CPK=very-high    -2.821960515451733
+    Attrib CPK=severely-high    3.838880164874027
+    Attrib diabetes=no    -2.1317906094553725
+    Attrib ejection_fraction=low    -0.2682060618605911
+    Attrib ejection_fraction=normal    2.981377891321752
+    Attrib ejection_fraction=borderline    -3.3248019567758673
+    Attrib ejection_fraction=mildly-low    0.6912891889913432
+    Attrib high_blood_pressure=yes    -1.966602144138168
+    Attrib platelets=normal    -1.834000896026033
+    Attrib platelets=low    2.1431275887913737
+    Attrib platelets=high    -2.262937715721843
+    Attrib platelets=very-high    1.9655124677050455
+    Attrib serum_creatinine=high    1.532668527042066
+    Attrib serum_creatinine=normal    -1.458062890109018
+    Attrib serum_creatinine=low    -0.11114042717194222
+    Attrib serum_sodium=normal    0.6438003428711196
+    Attrib serum_sodium=low    -0.815578112767291
+    Attrib serum_sodium=high    0.2064457048438088
+    Attrib sex=F    4.3559626820395465
+    Attrib smoking=yes    -0.46734163606500223
+Sigmoid Node 11
+    Inputs    Weights
+    Threshold    -0.3355109150834077
+    Attrib age=[61-70]    2.3201169079742923
+    Attrib age=[40-50]    -1.6703180253878254
+    Attrib age=[51-60]    0.4854955893053652
+    Attrib age=70plus    -0.4182836875833284
+    Attrib anaemia=no    6.800830736584351
+    Attrib CPK=normal    1.1078317426518116
+    Attrib CPK=high    -1.0176297796919376
+    Attrib CPK=very-high    1.6335868754423517
+    Attrib CPK=severely-high    -1.0618467534818377
+    Attrib diabetes=no    2.76597222007673
+    Attrib ejection_fraction=low    1.0687991478900027
+    Attrib ejection_fraction=normal    -0.5821327500415007
+    Attrib ejection_fraction=borderline    -0.5611943528260102
+    Attrib ejection_fraction=mildly-low    0.7947958982991499
+    Attrib high_blood_pressure=yes    3.502990600776851
+    Attrib platelets=normal    0.6920676961995669
+    Attrib platelets=low    -1.1163576193835518
+    Attrib platelets=high    0.5752681143718431
+    Attrib platelets=very-high    0.6608223209623301
+    Attrib serum_creatinine=high    -1.1635305931911017
+    Attrib serum_creatinine=normal    1.205920555770985
+    Attrib serum_creatinine=low    0.32255714839058836
+    Attrib serum_sodium=normal    -0.2818278852908426
+    Attrib serum_sodium=low    0.25918851136424503
+    Attrib serum_sodium=high    0.3576441424579583
+    Attrib sex=F    2.3091322725622425
+    Attrib smoking=yes    -1.1232363723500778
+Sigmoid Node 12
+    Inputs    Weights
+    Threshold    -0.41720692334984943
+    Attrib age=[61-70]    -0.34146848620885817
+    Attrib age=[40-50]    3.0331167892118103
+    Attrib age=[51-60]    1.811848117917921
+    Attrib age=70plus    -3.5355773738621017
+    Attrib anaemia=no    0.6629027492026588
+    Attrib CPK=normal    1.1124171447849462
+    Attrib CPK=high    0.7463940156746064
+    Attrib CPK=very-high    1.6811664884627617
+    Attrib CPK=severely-high    -2.612805172215309
+    Attrib diabetes=no    3.3547164844183155
+    Attrib ejection_fraction=low    2.3398695780648944
+    Attrib ejection_fraction=normal    0.5300563672372377
+    Attrib ejection_fraction=borderline    -1.212132243240942
+    Attrib ejection_fraction=mildly-low    -0.8548137686320679
+    Attrib high_blood_pressure=yes    -2.3661959419206022
+    Attrib platelets=normal    1.6715469312133622
+    Attrib platelets=low    -1.7743829581476676
+    Attrib platelets=high    0.6204867783693381
+    Attrib platelets=very-high    0.4347046505906008
+    Attrib serum_creatinine=high    -3.9117172995393528
+    Attrib serum_creatinine=normal    3.7097984154749284
+    Attrib serum_creatinine=low    0.5428798496273637
+    Attrib serum_sodium=normal    -0.0339853189761916
+    Attrib serum_sodium=low    0.13069943346743634
+    Attrib serum_sodium=high    0.32174918600371033
+    Attrib sex=F    -1.1818379312947658
+    Attrib smoking=yes    1.1066834363859637
+Sigmoid Node 13
+    Inputs    Weights
+    Threshold    -0.33401154241106007
+    Attrib age=[61-70]    -0.5015072096530239
+    Attrib age=[40-50]    0.8448629965599233
+    Attrib age=[51-60]    0.4399583269354518
+    Attrib age=70plus    -0.22335796829387622
+    Attrib anaemia=no    -0.510309503146723
+    Attrib CPK=normal    0.9840449883153055
+    Attrib CPK=high    -1.3736969317702143
+    Attrib CPK=very-high    1.306854382088554
+    Attrib CPK=severely-high    -0.166847032780112
+    Attrib diabetes=no    -0.11251943749454274
+    Attrib ejection_fraction=low    -1.350362558809659
+    Attrib ejection_fraction=normal    0.9414147890212682
+    Attrib ejection_fraction=borderline    0.8385962767808427
+    Attrib ejection_fraction=mildly-low    0.2828294776326442
+    Attrib high_blood_pressure=yes    0.44577941995225
+    Attrib platelets=normal    -0.1462816050606761
+    Attrib platelets=low    0.30526908674946684
+    Attrib platelets=high    0.21492444776293776
+    Attrib platelets=very-high    0.2726187491509815
+    Attrib serum_creatinine=high    0.34557025789135226
+    Attrib serum_creatinine=normal    -0.46246595422643033
+    Attrib serum_creatinine=low    0.4160243585598108
+    Attrib serum_sodium=normal    0.6469995614065817
+    Attrib serum_sodium=low    -0.3554719162567582
+    Attrib serum_sodium=high    0.041929293025591875
+    Attrib sex=F    -0.8290987783707392
+    Attrib smoking=yes    -0.28859003387072735
+Sigmoid Node 14
+    Inputs    Weights
+    Threshold    -1.3783171826645257
+    Attrib age=[61-70]    3.2608496130152376
+    Attrib age=[40-50]    -1.9251271473562868
+    Attrib age=[51-60]    3.348144509333804
+    Attrib age=70plus    -2.0409075096515923
+    Attrib anaemia=no    0.5439920851097445
+    Attrib CPK=normal    -1.634150514291929
+    Attrib CPK=high    2.775014851535018
+    Attrib CPK=very-high    0.5383491741552497
+    Attrib CPK=severely-high    0.9851373682644496
+    Attrib diabetes=no    2.289666647903162
+    Attrib ejection_fraction=low    0.06202650385410629
+    Attrib ejection_fraction=normal    0.6663115028981873
+    Attrib ejection_fraction=borderline    1.5324971817991704
+    Attrib ejection_fraction=mildly-low    0.37519119059651246
+    Attrib high_blood_pressure=yes    -0.922912840971371
+    Attrib platelets=normal    0.517783115480546
+    Attrib platelets=low    1.9788008544301225
+    Attrib platelets=high    -0.20858616050715328
+    Attrib platelets=very-high    0.424863496351557
+    Attrib serum_creatinine=high    1.472611069158564
+    Attrib serum_creatinine=normal    -1.5152117222444625
+    Attrib serum_creatinine=low    1.4944845560904136
+    Attrib serum_sodium=normal    2.6969277833125127
+    Attrib serum_sodium=low    -1.9377178894023375
+    Attrib serum_sodium=high    0.573090724651884
+    Attrib sex=F    1.2670203315888062
+    Attrib smoking=yes    0.5164676843478525
+Sigmoid Node 15
+    Inputs    Weights
+    Threshold    -0.3281917821733696
+    Attrib age=[61-70]    0.224227326041855
+    Attrib age=[40-50]    -0.24382898107735623
+    Attrib age=[51-60]    0.9947743982826398
+    Attrib age=70plus    -0.3382894291992849
+    Attrib anaemia=no    -0.6415742406563261
+    Attrib CPK=normal    0.46512619382512815
+    Attrib CPK=high    -1.9641870555759269
+    Attrib CPK=very-high    2.0486308667628244
+    Attrib CPK=severely-high    -0.014679584324330131
+    Attrib diabetes=no    0.42168690685399407
+    Attrib ejection_fraction=low    -1.777197181734028
+    Attrib ejection_fraction=normal    0.1437142172440344
+    Attrib ejection_fraction=borderline    1.8457222040353012
+    Attrib ejection_fraction=mildly-low    0.49007026321369807
+    Attrib high_blood_pressure=yes    -0.1390531447163011
+    Attrib platelets=normal    0.08046072855042233
+    Attrib platelets=low    0.6480273263160021
+    Attrib platelets=high    -0.40438636662005284
+    Attrib platelets=very-high    0.28573801202289134
+    Attrib serum_creatinine=high    1.04356840785159
+    Attrib serum_creatinine=normal    -1.191352499452088
+    Attrib serum_creatinine=low    0.40097841310335713
+    Attrib serum_sodium=normal    0.9392008181185982
+    Attrib serum_sodium=low    -0.6780409429577473
+    Attrib serum_sodium=high    0.059648342215480994
+    Attrib sex=F    -0.31266988189814865
+    Attrib smoking=yes    0.971783889352996
+Class died
+    Input
+    Node 0
+Class survived
+    Input
+    Node 1
+
+
+Time taken to build model: 0.37 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances         174               63.7363 %
+Incorrectly Classified Instances        99               36.2637 %
+Kappa statistic                          0.163 
+Mean absolute error                      0.3681
+Root mean squared error                  0.5514
+Relative absolute error                 83.1994 %
+Root relative squared error            117.2995 %
+Total Number of Instances              273     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.411    0.251    0.446      0.411    0.428      0.163    0.624     0.444     died
+                 0.749    0.589    0.721      0.749    0.735      0.163    0.624     0.762     survived
+Weighted Avg.    0.637    0.478    0.630      0.637    0.633      0.163    0.624     0.657     
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+  37  53 |   a = died
+  46 137 |   b = survived
+
+
+
+
+
+
+
+
+
+
+
+代码执行：
+[user@sahara ~/A2]$ python3 FINAL.py
+=== KNN ===
+Fold 1 accuracy: 0.5357
+Fold 2 accuracy: 0.8214
+Fold 3 accuracy: 0.6429
+Fold 4 accuracy: 0.6296
+Fold 5 accuracy: 0.5556
+Fold 6 accuracy: 0.5556
+Fold 7 accuracy: 0.7037
+Fold 8 accuracy: 0.8148
+Fold 9 accuracy: 0.7037
+Fold 10 accuracy: 0.5926
+Average accuracy: 0.6555555555555556
+
+=== KNN+ ===
+Fold 1 accuracy: 0.5714
+Fold 2 accuracy: 0.8214
+Fold 3 accuracy: 0.6429
+Fold 4 accuracy: 0.6296
+Fold 5 accuracy: 0.5556
+Fold 6 accuracy: 0.5185
+Fold 7 accuracy: 0.7037
+Fold 8 accuracy: 0.8148
+Fold 9 accuracy: 0.7037
+Fold 10 accuracy: 0.5926
+Average accuracy: 0.6554232804232804
+
+=== Decision Tree ===
+Fold 1 accuracy: 0.6429
+Fold 2 accuracy: 0.6071
+Fold 3 accuracy: 0.5714
+Fold 4 accuracy: 0.6667
+Fold 5 accuracy: 0.6667
+Fold 6 accuracy: 0.5185
+Fold 7 accuracy: 0.7407
+Fold 8 accuracy: 0.8148
+Fold 9 accuracy: 0.6296
+Fold 10 accuracy: 0.5185
+Average accuracy: 0.6376984126984127
+
+=== Decision Tree+ ===
+Fold 1 accuracy: 0.6071
+Fold 2 accuracy: 0.5714
+Fold 3 accuracy: 0.6786
+Fold 4 accuracy: 0.4815
+Fold 5 accuracy: 0.5926
+Fold 6 accuracy: 0.4815
+Fold 7 accuracy: 0.6667
+Fold 8 accuracy: 0.8148
+Fold 9 accuracy: 0.5926
+Fold 10 accuracy: 0.3704
+Average accuracy: 0.5857142857142856
